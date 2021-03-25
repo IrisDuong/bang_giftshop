@@ -1,0 +1,29 @@
+.dropdown{
+    float: left;
+    padding: 20px 50px;
+    transition: 5s;
+}
+.dropdown li{
+    list-style: none;
+}
+.dropdown  a{
+    text-decoration: none;
+}
+.dropdown > .droplink a{
+    font-size: 18px;
+    font-weight: bold;
+}
+.dropdown-content{
+    display: none;
+    min-width: 160px;
+    position: absolute;
+}
+.dropdown .dropdown-content  .droplink{
+   padding: 15px 0px;
+}
+.dropdown:hover .dropdown-content{
+    display: inline-block;
+}
+.dropdown:hover a{
+    text-decoration: none;
+}
