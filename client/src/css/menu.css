@@ -12,11 +12,14 @@
 .dropdown > .droplink a{
     font-size: 18px;
     font-weight: bold;
+    color: #6e796b;
 }
 .dropdown-content{
     display: none;
     min-width: 160px;
     position: absolute;
+    max-width: 100%;
+    /* background-color: #9fd092; */
 }
 .dropdown .dropdown-content  .droplink{
    padding: 15px 0px;
@@ -27,3 +30,24 @@
 .dropdown:hover a{
     text-decoration: none;
 }
+.lang-btn{
+    background: transparent;
+    border: none;
+    position: relative;
+  }
+  .lang-btn:before{
+    background: url(../media/icon_arrow.533f49a9.svg) no-repeat;
+    background-size: 48px;
+    content: "";
+    height: 28px;
+    width: 24px;
+    left: 100%;
+    top: 50%;
+    margin-top: -12px;
+    position: absolute;
+    z-index: 9;
+    transition: all .1s ease;
+  }
+  .lang-btn.up:before{
+    background-position: -25px 0;
+  }

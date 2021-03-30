@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+.lang-btn{
+  background: transparent;
+  border: none;
+  position: relative;
+}
+.lang-btn:before{
+  background: url(./media/icon_arrow.533f49a9.svg) no-repeat;
+  background-size: 48px;
+  content: "";
+  height: 28px;
+  width: 24px;
+  left: 100%;
+  top: 50%;
+  margin-top: -12px;
+  position: absolute;
+  z-index: 9;
+  transition: all .1s ease;
+}
+.lang-btn.up:before{
+  background-position: -25px 0;
+}
