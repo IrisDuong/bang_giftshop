@@ -49,12 +49,6 @@ const Menu  = props =>{
                         if(e.hasChildren && e.treeLevel == 1){
                             return (
                                 <Fragment>
-                                        {/* <li><a href="#" className={`parent-dropdown-btn-${e.treeLevel}-id-${e.id}`}>{e.menuName}</a></li>
-                                        <ul>
-                                            {listChildren?.map((v)=>{
-                                                return( <li><a href="#" className={`dropdown-btn-${v.id}`}>{v.menuName}</a></li>)
-                                            })}
-                                        </ul> */}
                                         {renderParentMenu(e)}
                                 </Fragment>
                             )
