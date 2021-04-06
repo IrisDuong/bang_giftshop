@@ -1,6 +1,8 @@
 import React, {useState,useEffect,Fragment} from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import '../../../css/menu.css';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faArrowAltCircleRight} from '@fortawesome/free-solid-svg-icons'
 const useStyle = makeStyles({
     root: {
         height: 240,
@@ -29,11 +31,19 @@ const Menu  = props =>{
             return (
                <Fragment>
                     <div className={`dropdown-content dropdown-content-id-${menu.id}`}>
-                        <ul className="list-inline">
-                            {listSubMenu?.map((k)=>{
-                                return(<li className={`droplink droplink-level-${k.treeLevel} droplink-item-id-${k.id}`}><a href="#">{k.menuName}</a></li>)
-                            })}
-                        </ul>
+                        <div>
+                            <ul className="list-inline">
+                                {listSubMenu?.map((k)=>{
+                                    return(
+                                    <li className={`droplink droplink-level-${k.treeLevel} droplink-item-id-${k.id}`}>
+                                        <div>
+                                            <FontAwesomeIcon icon={faArrowAltCircleRight}></FontAwesomeIcon>
+                                            <a href="#">{k.menuName}</a>
+                                        </div>
+                                    </li>)
+                                })}
+                            </ul>
+                        </div>
                     </div>
                </Fragment>
             )
