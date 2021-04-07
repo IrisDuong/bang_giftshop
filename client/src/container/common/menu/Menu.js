@@ -2,22 +2,25 @@ import React, {useState,useEffect,Fragment} from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import '../../../css/menu.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faArrowAltCircleRight} from '@fortawesome/free-solid-svg-icons'
+import {faArrowAltCircleRight,faHome} from '@fortawesome/free-solid-svg-icons'
 const useStyle = makeStyles({
     root: {
         height: 240,
         flexGrow: 1,
         maxWidth: 400,
-      },
+    },
 })
 const Menu  = props =>{
-    
     const renderParentMenu = (menu)=>{
         let resultSubMenu = renderSubmenu(menu);
         return(
             <Fragment>
                 <div className={`dropdown dropdown-id-${menu.id}`}>
-                    <li className={`droplink droplink-level-${menu.treeLevel} droplink-id`}><a href="#" >{menu.menuName}</a></li>
+                    <li className={`droplink droplink-level-${menu.treeLevel} droplink-id`}>
+                        <span><FontAwesomeIcon icon={faHome}></FontAwesomeIcon></span>
+                        <a href="#" >{menu.menuName}
+                        </a>
+                        </li>
                     {resultSubMenu}
                 </div>
             </Fragment>
@@ -37,8 +40,8 @@ const Menu  = props =>{
                                     return(
                                     <li className={`droplink droplink-level-${k.treeLevel} droplink-item-id-${k.id}`}>
                                         <div>
-                                            <FontAwesomeIcon icon={faArrowAltCircleRight}></FontAwesomeIcon>
-                                            <a href="#">{k.menuName}</a>
+                                            <span className="subMenuArrow"><FontAwesomeIcon icon={faArrowAltCircleRight}></FontAwesomeIcon></span>
+                                            <a href="#" >{k.menuName}</a>
                                         </div>
                                     </li>)
                                 })}

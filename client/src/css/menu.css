@@ -15,12 +15,11 @@
 .dropdown-content  .droplink a{
     color: #4a5946;
     font-size: 18px;
-    /* position: relative; */
-    /* left: 40px; */
-    /* padding: 0px 5px; */
+    position: relative; 
+    left: 50px;
 }
 .dropdown-content{
-    /* display: none; */
+    display: none;
     position: inherit;
     /* background-image: url(../media/_sub_menu_bg_2.jpg); */
     /* background-size: auto 100%; */
@@ -34,9 +33,19 @@
     position: relative;
     padding: 10px 0px;
 }
-.dropdown .dropdown-content  .droplink{
+.dropdown-content  .droplink{
    padding: 15px 0px;
 }
+
+.subMenuArrow{
+    display: none;
+    position: absolute;
+    left: 8px;
+    
+}
+/**
+Hover
+**/
 .dropdown:hover .dropdown-content, .dropdown:hover a{
     display: inline-block;
     text-decoration: none;
@@ -53,7 +62,16 @@
 .dropdown-content ul li:hover{
     background-color: #FFFFFF;
     font-weight: bold;
-   }
+}
+.dropdown-content ul li:hover .subMenuArrow{
+    display: inline;
+}
+.enabledSubMenuArrow{
+    display: block;
+}
+.disabledSubMenuArrow{
+    display:none;
+}
 /* .lang-btn{
     background: transparent;
     border: none;

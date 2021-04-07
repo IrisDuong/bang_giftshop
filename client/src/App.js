@@ -5,11 +5,11 @@ import Menu from './container/common/menu/Menu';
 import 'bootstrap/dist/css/bootstrap.min.css'
 function App() {
   var listMenus = [
-    {id:1,menuName:'Home',parent:0,hasChildren:true,treeLevel:1},
-    {id:2,menuName:'About',parent:0,hasChildren:true,treeLevel:1},
-    {id:3,menuName:'Products',parent:0,hasChildren:true,treeLevel:1},
-    {id:4,menuName:'Service',parent:0,hasChildren:true,treeLevel:1},
-    {id:5,menuName:'Community',parent:0,hasChildren:true,treeLevel:1},
+    {id:1,menuName:'Home',parent:0,hasChildren:true,treeLevel:1,iconClassName:'faHome'},
+    {id:2,menuName:'About',parent:0,hasChildren:true,treeLevel:1,iconClassName:''},
+    {id:3,menuName:'Products',parent:0,hasChildren:true,treeLevel:1,iconClassName:''},
+    {id:4,menuName:'Service',parent:0,hasChildren:true,treeLevel:1,iconClassName:''},
+    {id:5,menuName:'Community',parent:0,hasChildren:true,treeLevel:1,iconClassName:''},
     {id:6,menuName:'Mision',parent:2,hasChildren:false,treeLevel:2},
     {id:7,menuName:'Process of Develoment',parent:2,hasChildren:false,treeLevel:2},
     {id:8,menuName:'Stuffed animal',parent:3,hasChildren:false,treeLevel:2},
