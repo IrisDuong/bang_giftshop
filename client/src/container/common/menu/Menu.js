@@ -2,7 +2,7 @@ import React, {useState,useEffect,Fragment} from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import '../../../css/menu.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faArrowAltCircleRight,faHome} from '@fortawesome/free-solid-svg-icons'
+import {faArrowAltCircleRight,faHome,faList} from '@fortawesome/free-solid-svg-icons'
 const useStyle = makeStyles({
     root: {
         height: 240,
@@ -13,12 +13,19 @@ const useStyle = makeStyles({
 const Menu  = props =>{
     const renderParentMenu = (menu)=>{
         let resultSubMenu = renderSubmenu(menu);
+        let listProductIcon =  '';
+        if(menu.id == 1){
+            listProductIcon =<FontAwesomeIcon icon={faList} />
+        }else if(menu.id == 2){
+            listProductIcon =  <FontAwesomeIcon icon={faHome}></FontAwesomeIcon>;
+        }
+        
         return(
             <Fragment>
                 <div className={`dropdown dropdown-id-${menu.id}`}>
                     <li className={`droplink droplink-level-${menu.treeLevel} droplink-id`}>
-                        <span><FontAwesomeIcon icon={faHome}></FontAwesomeIcon></span>
-                        <a href="#" >{menu.menuName}
+                    <span>{listProductIcon}</span>
+                        <a href="#">{menu.menuName}
                         </a>
                         </li>
                     {resultSubMenu}

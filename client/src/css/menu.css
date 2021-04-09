@@ -9,8 +9,14 @@
 }
 .dropdown > .droplink a{
     font-size: 18px;
+    font-weight: bolder;
+    color: #4a5946;
+}
+.dropdown > .droplink span {
+    font-size: 18px;
     font-weight: bold;
     color: #57834c;
+    padding: 0px 10px;
 }
 .dropdown-content  .droplink a{
     color: #4a5946;
@@ -53,9 +59,9 @@ Hover
 }
 .dropdown:hover > .droplink{
     background-color: #63845a;
-    transition: 1s;
+    /* border-radius: 15px; */
 }
-.dropdown:hover > .droplink a{
+.dropdown:hover > .droplink span, .dropdown:hover >.droplink a{
     color: #FFFFFF;
     font-weight: bolder;
 }
